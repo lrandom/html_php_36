@@ -1,0 +1,56 @@
+.container {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border: 1px solid red;
+    margin: 0px auto;
+    width: 899px;
+}
+
+.header {
+    background: coral;
+    height: 100px;
+}
+
+.menu {
+    background: coral;
+    height: 50px;
+    margin-top: 10px
+}
+
+.main-content {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 1000px;
+    margin-top: 10px
+}
+
+.left-sidebar {
+    width: 20%;
+    float: left;
+    background: coral;
+    height: inherit;
+}
+
+.mid-content {
+    width: 55%;
+    float: left;
+    background: coral;
+    height: inherit;
+    margin-left: 20px;
+}
+
+.right-sidebar {
+    float: right;
+    background: coral;
+    width: 20%;
+    height: inherit;
+    margin-left: 5px;
+}
+
+.footer {
+    background: coral;
+    height: 100px;
+    margin-top: 10px
+}
