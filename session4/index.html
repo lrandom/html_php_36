@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var mang = ["Ha Noi", "Hai Phong", "Quang Ninh", "Nam Dinh"];
+        console.log(mang[0]);
+        for (let index = 0; index < mang.length; index++) {
+            console.log(mang[index]);
+        }
+
+        //Them phan tu vao mang
+        mang.push("Viet Nam");
+        console.log("Mang moi sau khi them");
+        console.log(mang);
+
+        //Xoa phan tu mang 
+        mang.pop();
+        console.log("Mang moi sau khi xoa phan tu cuoi");
+        console.log(mang);
+
+        //Them phan tu vao dau mang
+        mang.unshift("Asia");
+        console.log("Mang moi sau khi them phan tu vao dau");
+        console.log(mang);
+
+        //Xoa phan tu dau mang
+        mang.shift();
+        console.log("mang sau khi xoa phan tu dau tien");
+        console.log(mang);
+
+        //Noi hai mang
+        var mang2 = ["A", "B", "C", "D"];
+        mang = mang.concat(mang2);
+        console.log("mang sau khi noi");
+        console.log(mang);
+
+        //cat mang 
+        mang.splice(0, 2);
+        console.log("Mang sau khi cat noi");
+        console.log(mang);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
