@@ -8,10 +8,10 @@
     <title>Document</title>
     <script>
         var mang = ["Ha Noi", "Hai Phong", "Quang Ninh", "Nam Dinh"];
-        console.log(mang[0]);
-        for (let index = 0; index < mang.length; index++) {
-            console.log(mang[index]);
-        }
+        // console.log(mang[0]);
+        // for (let index = 0; index < mang.length; index++) {
+        //     console.log(mang[index]);
+        // }
 
         //Them phan tu vao mang
         mang.push("Viet Nam");
@@ -35,7 +35,7 @@
 
         //Noi hai mang
         var mang2 = ["A", "B", "C", "D"];
-        mang = mang.concat(mang2);
+        mang = mang.concat(mang2); //<=>mang=[...mang,...mang2] ES6
         console.log("mang sau khi noi");
         console.log(mang);
 
@@ -43,11 +43,73 @@
         mang.splice(0, 2);
         console.log("Mang sau khi cat noi");
         console.log(mang);
+
+        console.log(mang.valueOf());
+
     </script>
 </head>
 
 <body>
+    <div id="test">
+    </div>
 
+    <span>
+        A
+    </span>
+
+    <span>
+        B
+    </span>
+
+    <span>
+        C
+    </span>
+
+    <span class="name">
+
+    </span>
+
+    <span class="name">
+
+    </span>
+
+    <div>
+        <div>child1</div>
+        <div id="child">child</div>
+        <div>child2</div>
+    </div>
+
+    <ul id="wrapper">
+        <li>A1</li>
+        <li>A2</li>
+        <li>A3</li>
+    </ul>
 </body>
+
+<script>
+    //getElementById
+    var node = document.getElementById('test');
+    node.innerHTML = 'ABCDXYZ';
+
+    //getElementsByTagNam
+    var nodesSpan = document.getElementsByTagName('span');
+    for (let index = 0; index < nodesSpan.length; index++) {
+        nodesSpan[index].innerHTML = index;
+    }
+
+    var nodesNameClass = document.getElementsByClassName('name');
+    for (let index = 0; index < nodesNameClass.length; index++) {
+        nodesNameClass[index].innerHTML = 'class' + index;
+    }
+
+    var nodeChild = document.getElementById("child");
+    nodeChild.parentElement.innerHTML = 'parent';
+
+    nodeChild.nextElementSibling.innerHTML = 'child 2 update';
+    nodeChild.previousElementSibling.innerHTML = 'child 1 update';
+
+    var nodeUL = document.getElementById('wrapper');
+    console.log(nodeUL.children.length);
+</script>
 
 </html>
