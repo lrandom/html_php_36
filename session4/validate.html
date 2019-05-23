@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validate Form</title>
+    <style>
+        .error {
+            color: crimson;
+        }
+
+        .form-control {
+            margin-top: 20px;
+        }
+
+        .form-control input {
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #cdcdcd
+        }
+
+        .form-control label {
+            width: 100px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="return validate()">
+        <div class="form-control">
+            <div>
+                <label>Username</label>
+                <input type="text" name="username" id="username" />
+            </div>
+            <div class="error"></div>
+        </div>
+
+        <div class="form-control">
+            <div>
+                <label>Password</label>
+                <input type="password" name="pwd" id="pwd" />
+            </div>
+            <div class="error"></div>
+        </div>
+
+        <div class="form-control">
+            <div>
+                <label>FullName</label>
+                <input type="text" name="fullname" id="fullname" />
+            </div>
+            <div class="error"></div>
+        </div>
+
+        <div class="form-control">
+            <div>
+                <label>Address</label>
+                <input type="text" name="address" id="address" />
+            </div>
+            <div class="error"></div>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+</body>
+
+<script src="validate.js">
+
+</script>
+
+</html>
