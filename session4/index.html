@@ -84,12 +84,18 @@
         <li>A2</li>
         <li>A3</li>
     </ul>
+
+    <img src="" id="anh">
 </body>
 
 <script>
     //getElementById
     var node = document.getElementById('test');
     node.innerHTML = 'ABCDXYZ';
+
+    var nodeNew = document.createElement("p");
+    nodeNew.innerHTML = "lorem ipsum dolor sit amen";
+    node.appendChild(nodeNew);
 
     //getElementsByTagNam
     var nodesSpan = document.getElementsByTagName('span');
@@ -103,13 +109,23 @@
     }
 
     var nodeChild = document.getElementById("child");
-    nodeChild.parentElement.innerHTML = 'parent';
+    // nodeChild.parentElement.innerHTML = 'parent';
 
     nodeChild.nextElementSibling.innerHTML = 'child 2 update';
     nodeChild.previousElementSibling.innerHTML = 'child 1 update';
 
-    var nodeUL = document.getElementById('wrapper');
-    console.log(nodeUL.children.length);
+    //var nodeUL = document.getElementById('wrapper');
+    //console.log(nodeUL.children.length);
+
+    node.style.background = 'red';
+
+
+    var nodeAnh = document.getElementById("anh");
+    nodeAnh.setAttribute('src', 'http://morehome.vn/Portals/0/xNews/uploads/2017/12/5/thiet-ke-noi-that-dep-lung-linh-voi-mau-vang-be-2.jpeg');
+    alert(nodeAnh.getAttribute('src'));
+
+
+
 </script>
 
 </html>
