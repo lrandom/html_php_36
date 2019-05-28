@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./../jquery.js"></script>
+</head>
+<style>
+    .preview {
+        padding: 0px;
+        margin: 0px;
+        margin-top: 10px;
+    }
+
+    .preview li {
+        list-style: none;
+        float: left;
+        margin-left: 10px;
+    }
+
+    .preview li img {
+        width: 100px;
+        height: 50px;
+    }
+
+    .big-image {
+        width: 562px;
+        height: 300px;
+        border: 1px solid red;
+    }
+
+    .big-image img {
+        width: 562px;
+        height: 300px;
+    }
+</style>
+
+<body>
+    <div class="big-image">
+        <img src="" />
+    </div>
+
+    <ul class="preview">
+        <li>
+            <img src="img/anh1.jpeg" />
+        </li>
+
+        <li>
+            <img src="img/anh2.jpg" />
+        </li>
+
+        <li>
+            <img src="img/anh3.jpg" />
+        </li>
+
+        <li>
+            <img src="img/anh4.jpeg" />
+        </li>
+
+        <li>
+            <img src="img/anh5.jpg" />
+        </li>
+    </ul>
+</body>
+
+<script>
+    $(document).ready(function () {
+        let defaultSrc = $('.preview li img').eq(0).attr('src');
+        $('.big-image img').attr('src', defaultSrc);
+
+        $('.preview li img').click(function () {
+            let src = $(this).attr('src');
+
+            $('.big-image img').attr('src', src);
+        })
+    });
+
+    count = 60;
+    let a = setInterval(function () {
+        count--;
+        if (count <= 0) {
+            clearInterval(a);
+            alert("TIme up !!!");
+        }
+    }, 1000);
+</script>
+
+</html>

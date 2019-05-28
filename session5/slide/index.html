@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .slider {
+            position: relative;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .slider li {
+            position: absolute;
+            list-style: none
+        }
+
+        .slider li img {
+            width: 300px;
+            height: 150px;
+        }
+    </style>
+    <script src="./../jquery.js"></script>
+</head>
+
+<body>
+    <div>
+        <button class="btn-prev">prev</button>
+        <button class="btn-next">next</button>
+    </div>
+    <ul class="slider">
+        <li>
+            <img src="img/anh1.jpeg" />
+        </li>
+        <li>
+            <img src="img/anh2.jpg" />
+        </li>
+        <li>
+            <img src="img/anh3.jpg" />
+        </li>
+        <li>
+            <img src="img/anh4.jpeg" />
+        </li>
+        <li>
+            <img src="img/anh5.jpg" />
+        </li>
+    </ul>
+</body>
+
+<script>
+    $(document).ready(function () {
+        var count = $('.slider li').length - 1;
+        $('.btn-next').click(function () {
+            if (count > 0) {
+                $('.slider li').eq(count).hide();
+                count--;
+            }
+        })
+
+        $('.btn-prev').click(function () {
+            if (count < ($('.slider li').length - 1)) {
+                count++;
+                $('.slider li').eq(count).show();
+            }
+        })
+    });
+</script>
+
+</html>

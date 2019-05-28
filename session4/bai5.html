@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <p>This is paragraph 1</p>
+        <p>This is paragraph 2</p>
+        <p>This is paragraph 3</p>
+        <p>This is paragraph 4</p>
+    </div>
+
+    <div id="coppy-wrapper">
+
+    </div>
+
+    <button id="btn" onclick="coppy()">Coppy</button>
+
+</body>
+<script>
+    function coppy() {
+        var nodeWrapper = document.getElementById('wrapper');
+        var childNodes = nodeWrapper.children;
+        var childCoppyWrapper = document.getElementById("coppy-wrapper");
+        for (let index = 0; index < childNodes.length; index++) {
+            var node = childNodes[index].cloneNode(true);
+            childCoppyWrapper.appendChild(node);
+        }
+    }
+</script>
+
+</html>

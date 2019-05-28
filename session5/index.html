@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    #wrapper {
+        /* display: none; */
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background: red
+    }
+</style>
+
+<body>
+    <div id="wrapper" class="name">
+        <p>Doan van 1</p>
+        <p>Doan van 2</p>
+        <p>Doan van 3</p>
+        <p>Doan van 4</p>
+    </div>
+
+    <div class="box"></div>
+    <div class="btn">Nhan vao em di</div>
+</body>
+<script>
+    $(document).ready(function () {
+        $('.btn').click(function () {
+            // $('#wrapper').hide();
+            //$('#wrapper').slideDown();
+            //$('#wrapper').slideUp();
+            $('.box').animate({
+                width: '500px',
+                height: '500px'
+            }, 1000, function () {
+                alert("Hoat hình da xong roi");
+            })
+        })
+        // $('.btn').click(function () {
+        //     alert("Ban da click vao mot nut");
+        // });
+
+        // $('.btn').click(function () {
+        //     alert("Ban click vao mot nut lan 2");
+        // })
+
+
+        // $('.btn').on('click', function () {
+        //     alert("HIHI");
+        // });
+
+        // $('.btn').off('click');
+
+        //code jquery đặt ở đây 
+        //demo html
+        //console.log($('#wrapper').html());
+        //$('#wrapper').html('<p>Doan van 5</p>');
+
+        //$('#wrapper').remove();
+        //$('#wrapper').after('<div>Doan van sau wrapper</div>')
+
+        //$('#wrapper').empty();
+
+        //$('#wrapper').append('<p>Doan van 5</p>');
+
+        //console.log($('#wrapper').attr('class'));
+        //$('#wrapper').attr('class', 'abc');
+
+        // $('#wrapper').css({
+        //     background: 'red',
+        //     'font-size': '20px',
+        //     'margin-top': '10px',
+        //     'margin-left': '100px'
+        // });
+        // $('#wrapper').css('background', 'red');
+
+        // $('#wrapper').addClass('className');
+        // $('#wrapper').removeClass('className')
+
+
+    });
+</script>
+
+</html>
