@@ -84,6 +84,8 @@ var questions = [
 var count = 0;
 var score = 0;
 var obj = questions[count];
+var timerCount = null;
+var timer = 6;
 
 function load() {
     //load cau hoi vao the co class la question
@@ -110,6 +112,11 @@ function load() {
             $('.score span').html(score);
             //tang bien count de load cau tiep theo
             count++;
+            if (count >= questions.length) {
+                alert("Ban da chien thang, den trang nhan qua");
+                count = 0;
+                return;
+            }
             //load cau tiep theo
             obj = questions[count];
             load();
@@ -130,6 +137,18 @@ function load() {
 
 $(document).ready(function () {
     load();
-
+    timerCount = setInterval(function () {
+        timer -= 1;
+        $('.timer span').html(timer);
+        if (timer <= 0) {
+            if (score < 100) {
+                alert("Het thoi gian, ban bi loại");
+                clearInterval(timerCount);
+            } else {
+                alert("Ban da gianh chien thang, den trang nhan qua");
+                clearInterval(timerCount);
+            }
+        }
+    }, 1000);
 });
 
