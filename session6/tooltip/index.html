@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div style="text-align: center">
+        <a
+            data-image="https://upload.wikimedia.org/wikipedia/commons/6/66/An_up-close_picture_of_a_curious_male_domestic_shorthair_tabby_cat.jpg">cat</a>
+        <a
+            data-image="https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwNC84MTkvb3JpZ2luYWwvY3V0ZS1raXR0ZW4uanBn">cat
+            2</a>
+    </div>
+
+</body>
+<script>
+    $(document).ready(function () {
+        $('a').hover(
+            function (e) {
+                console.log(e.pageX);
+                console.log(e.pageY);
+                let src = $(this).attr('data-image');
+                $(this).after('<div class="show"><img src="' + src + '"/></div>');
+                $(this).next('.show').css({
+                    top: e.page + 40,
+                    left: e.pageX
+                })
+            },
+            function () {
+                $(this).next('.show').remove();
+            })
+    });
+</script>
+<style>
+    .show {
+        position: absolute
+    }
+
+    .show img {
+        width: 300px;
+    }
+</style>
+
+</html>
