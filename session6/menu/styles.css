@@ -1,0 +1,56 @@
+.menu{
+    background: crimson;
+    border:1px solid red;
+}
+
+.menu > ul {
+  background: crimson;
+  position: relative;
+  color: white;
+  font-size: 18px;
+  height: 40px;
+  font-weight: bold
+}
+
+.menu ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu li{
+    list-style: none
+}
+
+.menu > ul > li{
+    float: left;
+    position: relative;
+}
+
+.menu > ul > li a{
+    padding:10px;
+}
+
+.menu .sub-menu{
+    background: crimson;
+    margin-top:5px;
+}
+
+.menu .sub-menu li{
+    border-top:0.5px solid #ccddcc;
+    width: 150px;
+    display: block
+}
+
+.menu .sub-menu li a{
+    font-size: 14px;
+    font-weight: 400;
+    padding: 20px;
+}
+
+.menu .sub-menu{
+    position: absolute;
+    top:40px;
+    display: none;
+    z-index: 1000;
+}
+
