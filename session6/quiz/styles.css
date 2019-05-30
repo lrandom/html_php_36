@@ -1,0 +1,64 @@
+.wrapper{
+    border:1px solid #cdcdcd;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 800px;
+    margin:0px auto;
+}
+
+.wrapper .left{
+    float: left;
+    width: 500px;
+    height: 100%;
+}
+
+.wrapper .right{
+    float: left;
+    width: 290px;
+    border-left: 1px solid #cdcdcd;
+}
+
+.wrapper .right .timer{
+    border-bottom: 1px solid #cccc;
+    height: 250px;
+    font-size: 150px;
+    font-weight: bold;
+    text-align: center;
+    margin-top:50px;
+}
+
+.wrapper .right .score{
+    border-bottom: 1px solid #cccc;
+    height: 250px;
+    font-size: 150px;
+    font-weight: bold;
+    text-align: center;
+    margin-top:50px;
+    color:rebeccapurple;
+}
+
+.wrapper .left .question{
+    font-size: 30px;
+    color: chocolate;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.wrapper .left .answer div{
+    font-size: 20px;
+    border:1px solid #cdcdcd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top:15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.wrapper .left .answer div:hover{
+    background: rgba(169, 148, 44, 0.8);
+    cursor: pointer;
+}
+
+
